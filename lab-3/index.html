@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body ng-controller="myController" class="body">
+    <div class="panel">
+        <textarea placeholder="Введіть продукти через кому які ви вживаєте на сніданок" class="form-control" type="text" ng-model="text" col="40" row="20"></textarea><br>
+        <p><button class="btn btn-primary" ng-click="split(text)">Чи не забагато? </button></p> 
+        <p>{{arr}}</p>
+        {{ msg }}
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

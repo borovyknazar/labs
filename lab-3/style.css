@@ -1,0 +1,10 @@
+.body {
+    text-align: center;
+    margin: 8% 20%;
+}
+
+.panel{
+    background-color: inherit;
+    background-color: #dedede;
+    padding: 40px 80px;
+}

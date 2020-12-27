@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app="buyApp">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div ng-controller="toBuy" class="first">
+        <div class="header">Потрібно купити:</div>
+        <p ng-repeat="item in data.toBuy">
+            {{item.amount}} {{item.name}}
+            <button ng-click="buy(item.id)" class="btn btn-primary">Куплено</button>
+        </p>
+        <div ng-if="data.toBuy.length==0">
+            <p>Усе куплено</p>
+        </div>
+    </div>
+
+
+    <div ng-controller="bought" class="second">
+        <div class="header">Вже куплено:</div>
+        <p ng-repeat="item in data.bougth">
+            {{item.amount}} {{item.name}}
+        </p>
+        <div ng-if="data.bougth.length==0">
+            <p> Ще нічого не куплено</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
