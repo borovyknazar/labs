@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html ng-app="buyApp">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div ng-controller="toBuy" class="first">
+        <div class="header">Каталог автомобілів:</div>
+        <p ng-repeat="item in data.toBuy">
+            Товар: {{item.amount}} {{item.name}}
+            <button ng-click="buy(item.id)" class="btn btn-primary">Приховати</button>
+        </p>
+        <div ng-if="data.toBuy.length==0">
+            <p>Немає</p>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
