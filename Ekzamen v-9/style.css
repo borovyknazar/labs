@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    font-size: 1.9em;
+    padding-top: 50px;
+    color: #fff;
+}
+
+.first {
+    width: 45vw;
+    height: 50vh;
+    margin: auto;
+    text-align: center;
+    background-color: #000;
+}
+
+
+
+.header {
+    font-size: 20px;
+    margin: 20px 10px;
+}
